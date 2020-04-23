@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="stylesheet" href="./css/mui.minli.css">
+		<link rel="stylesheet" href="./css/swiper.minli.css">
+	</head>
+	<style>
+		body {
+			background: #ffffff!important;
+		}
+		
+		.mui-slider {
+			width: 95% !important;
+			margin: auto !important;
+		}
+		
+		html,
+		body {
+			position: relative;
+			height: 100%;
+		}
+		
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+		
+		.swiper-slide {
+			text-align: center;
+			font-size: 0.18rem;
+			background: #fff;
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+		/* .swiper-slide{
+        position: relative;
+    } */
+		
+		.beauty {
+			font-size: 0.12rem;
+			position: absolute;
+			top: 11%;
+			left: 7%;
+			color: #ffffff;
+		}
+		
+		.swiper-slide {
+			width: 1.4rem !important;
+			height: 1.47rem;
+			margin-top: -0.08rem;
+			margin-right: 0.15rem !important;
+			position: relative;
+		}
+		
+		.swiper-slide img {
+			margin-top: -0.38rem;
+		}
+		.middle-top {
+			margin-top: 42px;
+		}
+		.mui-bar-tab{
+			background: #fff;
+		}
+	</style>
+
+	<body>
+		<div class="top-li">
+			<div class="text">
+				<p>
+					首页
+				</p>
+			</div>
+			<div class="top-right">
+				<img class="unnamed" src="./images/unname.png" alt="">
+				<a href="./serve.html"><img class="server" src="./images/server.png" alt=""></a>
+			</div>
+		</div>
+		<div class="top-two">
+
+		</div>
+		<!-- 轮播图 -->
+		<div class="middle-top">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="./images/icon1.png">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="./images/icon1.png">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="./images/icon2.png">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="./images/icon3.png">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="./images/icon3.png">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="middle">
+				<div class="container">
+					<div class="text-one">
+						<p>
+							<span>首届UGD设计大会在京举办，引领增长时代的设计变</span>
+						</p>
+					</div>
+					<div class="text-two">
+						<div class="left-one">
+							<span><img src="./images/eye.png" alt=""></span>
+							<span>30636</span>
+						</div>
+						<div class="text-three">
+							<span>Daisy</span>
+							<span>16分钟前</span>
+						</div>
+					</div>
+					<div class="right-one">
+						<a href="detail.html"><img class="rectangle" src="./images/san.png" alt=""></a>
+					</div>
+				</div>
+				<div class="container">
+					<div class="text-one">
+						<p>
+							<span>首届UGD设计大会在京举办，引领增长时代的设计变</span>
+						</p>
+					</div>
+					<div class="text-two">
+						<div class="left-one">
+							<span><img src="./images/eye.png" alt=""></span>
+							<span>30636</span>
+						</div>
+						<div class="text-three">
+							<span>Daisy</span>
+							<span>16分钟前</span>
+						</div>
+					</div>
+					<div class="right-one">
+						<img class="rectangle" src="./images/san.png" alt="">
+					</div>
+				</div>
+				<div class="container1">
+					<div class="active">
+						<p>活动精选</p>
+					</div>
+					<!-- swiper -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img class="bearty-one" src="./images/swiper1.png" alt="">
+								<div class="beauty">
+									<span><img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u303.png" alt=""></span>
+									<p>30636</p>
+								</div>
+								<div class="beauty-bottom">
+									<span>全栈工程师线下培训课程</span>
+								</div>
+							</div>
+							<div class="swiper-slide"><img src="./images/swiper2.png" alt="">
+								<div class="beauty">
+									<span><img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u303.png" alt=""></span>
+									<span>30636</span>
+								</div>
+								<div class="beauty-bottom">
+									<span>全栈工程师线下培训课程</span>
+								</div>
+							</div>
+							<div class="swiper-slide"><img src="./images/swiper3.png" alt="">
+								<div class="beauty">
+									<span><img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u303.png" alt=""></span>
+									<span>30636</span>
+								</div>
+								<div class="beauty-bottom">
+									<span>全栈工程师线下培训课程</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-one">
+					<div class="container">
+						<div class="text-one">
+							<p>
+								<span>首届UGD设计大会在京举办，引领增长时代的设计变</span>
+							</p>
+						</div>
+						<div class="text-two">
+							<div class="left-one">
+								<span><img src="./images/eye.png" alt=""></span>
+								<span>30636</span>
+							</div>
+							<div class="text-three">
+								<span>Daisy</span>
+								<span>16分钟前</span>
+							</div>
+						</div>
+						<div class="right-one">
+							<img class="rectangle" src="./images/san.png" alt="">
+						</div>
+					</div>
+					<div class="container">
+						<div class="text-one">
+							<p>
+								<span>首届UGD设计大会在京举办，引领增长时代的设计变</span>
+							</p>
+						</div>
+						<div class="text-two">
+							<div class="left-one">
+								<span><img src="./images/eye.png" alt=""></span>
+								<span>30636</span>
+							</div>
+							<div class="text-three">
+								<span>Daisy</span>
+								<span>16分钟前</span>
+							</div>
+						</div>
+						<div class="right-one">
+							<img class="rectangle" src="./images/san.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+				<span class="mui-icon mui-icon-home"></span>
+			</a>
+			<a class="mui-tab-item" href="dynamic.html">
+				<span class="mui-icon mui-icon-paperplane"></span>
+			</a>
+			<a class="mui-tab-item" href="">
+				<span class="mui-icon mui-icon-email"></span>
+			</a>
+			<a class="mui-tab-item" href="MineTop.html">
+				<span class="mui-icon mui-icon-gear"></span>
+			</a>
+		</nav>
+		<script src="./js/mui.minli.js"></script>
+		<script src="./js/swiper.minli.js"></script>
+		<script src="js/bus.js"></script>
+		
+		<script>
+			// 轮播
+			// swiper
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				slidesPerGroup: 3,
+				loop: true,
+				loopFillGroupWithBlank: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
+	</body>
+</html>

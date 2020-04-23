@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/bus.css" />
+		<link href="css/mui.picker.css" rel="stylesheet">
+		<link href="css/mui.poppicker.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/setting.css" />
+		<script>
+			var h5pullDown = true;
+		</script>
+		<script src="js/mui.js"></script>
+		<script src="js/bus.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header">
+			<header class="header1">
+				<a class="retreat" href="javascript:void(0)">
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">设置</h1>
+				<a href="javascript:void(0)"></a>
+			</header>
+			<header class="header2">
+				<a class="retreat" href="javascript:void(0)" data-num='1'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">编辑资料</h1>
+				<a href="javascript:void(0)"></a>
+			</header>
+			<header class="header3">
+				<a class="retreat" href="javascript:void(0)" data-num='1'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">推送设置</h1>
+				<a href="javascript:void(0)"></a>
+			</header>
+			<header class="header4">
+				<a class="retreat" href="javascript:void(0)" data-num='1'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">赞赏设置</h1>
+				<a href="javascript:void(0)"></a>
+			</header>
+			<header class="header5">
+				<a class="retreat" href="javascript:void(0)" data-num='1'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">关于我们</h1>
+				<a href="javascript:void(0)"></a>
+			</header>
+			<header class="header6">
+				<a class="retreat" href="javascript:void(0)" data-num='2'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">修改用户名</h1>
+				<a class="save" href="javascript:void(0)">保存</a>
+			</header>
+			<header class="header7">
+				<a class="retreat" href="javascript:void(0)" data-num='2'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">修改签名</h1>
+				<a class="save" href="javascript:void(0)">保存</a>
+			</header>
+			<header class="header8">
+				<a class="retreat" href="javascript:void(0)" data-num='2'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">修改QQ</h1>
+				<a class="save" href="javascript:void(0)">保存</a>
+			</header>
+			<header class="header9">
+				<a class="retreat" href="javascript:void(0)" data-num='2'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">修改微信</h1>
+				<a class="save" href="javascript:void(0)">保存</a>
+			</header>
+			<header class="header10">
+				<a class="retreat" href="javascript:void(0)" data-num='2'>
+					<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png" />
+				</a>
+				<h1 class="title">修改微博</h1>
+				<a class="save" href="javascript:void(0)">保存</a>
+			</header>
+		</div>
+		<!--下拉容器-->
+		<div id="pullrefresh" class="pull mui-content mui-scroll-wrapper">
+			<!--下拉内容-->
+			<div class="box">
+				<!--切换内容-->
+				<div class="tabPage box1">
+					<div class="setting">
+						<div class="ID">
+							<ul>
+								<li data-url="2" class="jump">
+									<span>账号资料</span>
+									<span class="mui-icon mui-icon-forward"></span>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li data-url="AccountSafe" class="jump">
+									<span>账号绑定与安全</span>
+									<span class="mui-icon mui-icon-forward"></span>
+								</li>
+							</ul>
+						</div>
+						<div class="push">
+							<ul>
+								<li data-url="3" class="jump">
+									<span>推送设置</span>
+									<span class="mui-icon mui-icon-forward"></span>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li data-url="4" class="jump">
+									<span>赞赏设置</span>
+									<span class="mui-icon mui-icon-forward"></span>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li class="clearCache">
+									<span>清除缓存</span>
+									<span class="cache">207M</span>
+								</li>
+							</ul>
+						</div>
+						<div class="version">
+							<ul>
+								<li class="checkver">
+									<span>检查新版本</span>
+									<span class="mui-icon mui-icon-forward"></span>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li data-url="5" class="jump">
+									<span>关于我们</span>
+									<span class="mui-icon mui-icon-forward"></span>
+								</li>
+							</ul>
+						</div>
+						<div class="exit">
+							<p id="confirmBtn">退出账号</p>
+						</div>
+					</div>
+				</div>
+				<div class="tabPage box2">
+					<div class="edit">
+						<div class="user">
+							<ul>
+								<li class="avatar">
+									<a href="#picture">
+										<span>头像</span>
+										<div class="">
+											<img class="head" src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/编辑资料/u4569.png" />
+											<span class="mui-icon mui-icon-forward"></span>
+										</div>
+									</a>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li class="jump userName" data-url="6">
+									<span>用户名</span>
+									<div class="">
+										<span>特立独行的猫</span>
+										<span class="mui-icon mui-icon-forward"></span>
+									</div>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li class="jump" data-url="7">
+									<span>签名</span>
+									<div class="">
+										<span>与你分享我的观点，weibo：Alex Wang</span>
+										<span class="mui-icon mui-icon-forward"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="sex">
+							<ul>
+								<li>
+									<a href="#sex">
+										<span>性别</span>
+										<div class="">
+											<span class="sexTxt">女</span>
+											<span class="mui-icon mui-icon-forward"></span>
+										</div>
+									</a>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li id="showCityPicker">
+									<span>地区</span>
+									<div class="">
+										<span class="area">山东 青岛</span>
+										<span class="mui-icon mui-icon-forward"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="contact">
+							<ul>
+								<li class="jump" data-url="8"> <span>QQ</span>
+									<div class="">
+										<span>1195226</span>
+										<span class="mui-icon mui-icon-forward"></span>
+									</div>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li class="jump" data-url="9">
+									<span>微信</span>
+									<div class="">
+										<span>Alex Wang</span>
+										<span class="mui-icon mui-icon-forward"></span>
+									</div>
+								</li>
+								<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+								<li class="jump" data-url="10">
+									<span>微博</span>
+									<div class="">
+										<span>特立独行的猫</span>
+										<span class="mui-icon mui-icon-forward"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="focus">
+							<h2>关注领域</h2>
+							<ul class="clearfix">
+								<li>科技</li>
+								<li>娱乐</li>
+								<li>媒体</li>
+								<li class="add-labs">
+									+ 添加
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tabPage box3">
+					<div class="push">
+						<ul>
+							<li>
+								<span>点赞通知</span>
+								<div class="mui-switch">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+							<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+							<li>
+								<span>评论通知</span>
+								<div class="mui-switch">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+							<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/首页/u540.png" />
+							<li>
+								<span>新粉丝通知</span>
+								<div class="mui-switch">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+
+						</ul>
+						<ul>
+							<li>
+								<span>系统通知</span>
+								<div class="mui-switch">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabPage box4">
+					<div class="push">
+						<ul>
+							<li>
+								<span>是否开启赞赏</span>
+								<div class="mui-switch">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabPage box5">
+					<div class="content">
+						<p>我们是一个聚焦科技与创新的资讯平台，致力于为一切热爱思考与发现的用户，提供有效率的信息服务，从而帮助他们更清晰准确地洞察世界、实现更好的创新与创造。</p>
+						<p>我们平台上有独家原创内容，也有大量行业作者投递与授权的内容，还有我们在全网抓取筛选的授权内容。</p>
+						<p>
+							求真、品质、个性化、效率，是我们对内容推荐与分发的追求。
+						</p>
+						<div class="contact">
+							<p>
+								联系我们
+							</p>
+							<br />
+							<p>
+								Tel:0531-59696636
+							</p>
+							<br />
+							<p>
+								WeChat:feixiang0006963
+							</p>
+							<br />
+							<p>
+								Address:北京市朝阳区京顺路111号世界购物中心
+							</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="tabPage box6" style="background-color: #fff;">
+					<div class="userName">
+						<div class="niName">
+							<input type="text" value="特立独行的猫" placeholder="请输入昵称" />
+							<span class="del">×</span>
+						</div>
+						<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/修改用户名/u4669.png" />
+						<p>英文字母或汉字，限4-16个字符，一个汉字为2个字符</p>
+					</div>
+				</div>
+				<div class="tabPage box7">
+					<div class="content">
+						<input type="text" value="111111" placeholder="请输入签名" />
+					</div>
+				</div>
+				<div class="tabPage box8" style="background-color: #fff;">
+					<div class="userName">
+						<div class="niName">
+							<input type="text" value="特立独行的猫" placeholder="请输入昵称" />
+							<span class="del">×</span>
+						</div>
+						<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/修改用户名/u4669.png" />
+					</div>
+				</div>
+				<div class="tabPage box9" style="background-color: #fff;">
+					<div class="userName">
+						<div class="niName">
+							<input type="text" value="特立独行的猫" placeholder="请输入昵称" />
+							<span class="del">×</span>
+						</div>
+						<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/修改用户名/u4669.png" />
+					</div>
+				</div>
+				<div class="tabPage box10" style="background-color: #fff;">
+					<div class="userName">
+						<div class="niName">
+							<input type="text" value="特立独行的猫" placeholder="请输入昵称" />
+							<span class="del">×</span>
+						</div>
+						<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/修改用户名/u4669.png" />
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--头像弹出框-->
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom" style="display: none;">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="javascript:void(0)">拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:void(0)">相册</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture" class=""><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<!--性别弹出框-->
+		<div id="sex" class="mui-popover mui-popover-action mui-popover-bottom" style="display: none;">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="javascript:void(0)">男</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:void(0)">女</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture" class=""><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+
+		<!--关注领域弹出框-->
+		<div id="focus">
+			<h2>选择关注领域</h2>
+			<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/编辑资料/u4615.png" />
+			<div class="typeList">
+				<ul>
+					<li>医疗健康</li>
+					<li>新媒体</li>
+					<li class="active">娱乐</li>
+				</ul>
+				<ul>
+					<li>AI</li>
+					<li>人工智能</li>
+					<li>大数据</li>
+				</ul>
+				<ul>
+					<li class="active">社交</li>
+					<li>时政新闻</li>
+					<li>医疗健康</li>
+				</ul>
+				<ul>
+					<li>金融投资</li>
+					<li>股票证券</li>
+					<li>硬件</li>
+				</ul>
+				<ul>
+					<li>互联网</li>
+				</ul>
+			</div>
+			<div class="btn">
+				<button class="btn1">确定</button>
+				<button class="btn2">取消</button>
+			</div>
+		</div>
+
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/city.data.js"></script>
+		<script src="js/city.data-3.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/setting.js"></script>
+	</body>
+
+</html>

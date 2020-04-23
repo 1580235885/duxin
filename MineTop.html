@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/MineTop.css">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script src="js/bus.js"></script>
+    <title>MineTop</title>
+</head>
+<style>
+    .y-item ul li p {
+        color: #fff;
+    }
+    .mui-bar-tab{
+		background: #fff;
+	}
+</style>
+
+<body>
+    <div class="y-container">
+        <p class="top-title">我的</p>
+        <div class="personData">
+            <div class="head">
+                <img src="./images/headicon.png" alt="">
+            </div>
+            <div class="y-person">
+                <div class="per-left">
+                    <p>特立独行的猫</p>
+                    <p>
+                        <a  class="MyAttention"><span class="attention">关注 22</span></a>
+                        <a class="MyAttention"><span>粉丝 2302</span></a>
+                    </p>
+                </div>
+                <div class="per-right">
+                    <a href="./PersonPage.html"><span>个人主页<i></i></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="y-item">
+            <ul>
+                <li class="Myarticle">
+                    <p class="y-num">232</p>
+                    <p>动态</p>
+                </li>
+                <li class="Myarticle">
+                    <p class="y-num">269</p>
+                    <p>文章</p>
+                </li>
+                <li class="Collect">
+                    <p class="y-num">143</p>
+                    <p>收藏</p>
+                </li>
+                <li class="BrowsingHistory">
+                    <p class="y-num">222</p>
+                    <p>浏览</p>
+                </li>
+            </ul>
+        </div>
+        <div class="list-item">
+            <ul>
+                <li class="contribute">
+                    <i class="writeicon"></i>
+                    <span>我要投稿</span>
+                    <i class="mui-icon mui-icon-forward righticon3"></i>
+                </li>
+                <li class="myActive">
+                    <i class="activityicon"></i>
+                    <span>我的活动</span>
+                    <i class="mui-icon mui-icon-forward righticon3"></i>
+                </li>
+                <li class="myWallet">
+                    <i class="walleticon"></i>
+                    <span>我的钱包</span>
+                    <i class="mui-icon mui-icon-forward righticon3"></i>
+                </li>
+                <li class="setting">
+                    <i class="seticon"></i>
+                    <span>设置</span>
+                    <i class="mui-icon mui-icon-forward righticon3"></i>
+                </li>
+                <li class="feedback">
+                    <i class="feedbackicon"></i>
+                    <span>反馈建议</span>
+                    <i class="mui-icon mui-icon-forward righticon3"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+		</a>
+		<a class="mui-tab-item" href="dynamic.html">
+			<span class="mui-icon mui-icon-paperplane"></span>
+		</a>
+		<a class="mui-tab-item" href="javascript:void(0)">
+			<span class="mui-icon mui-icon-email"></span>
+		</a>
+		<a class="mui-tab-item mui-active" href="javascript:void(0)">
+			<span class="mui-icon mui-icon-gear"></span>
+		</a>
+	</nav>
+    <script>
+        mui.init()
+        mui('.list-item ul').on('tap', '.list-item ul li', function () {
+            location.href = this.className + '.html'
+        })
+        mui(".y-item").on('tap', '.y-item li', function () {
+            location.href = this.className + '.html'
+            localStorage.setItem("key", $(".y-item li").index($(this)))
+        })
+        mui(".per-left").on('tap','.per-left p a',function(){
+            location.href = this.className + '.html'
+            localStorage.setItem('index',$('.per-left p a').index($(this)))
+        })
+    </script>
+</body>
+
+</html>

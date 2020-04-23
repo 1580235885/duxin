@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/MineTop.css">
+    <title>账号绑定与安全</title>
+</head>
+<style>
+    body,
+    html {
+        background: #f2f2f2 !important;
+    }
+
+    .binding span {
+        margin-bottom: .1rem;
+    }
+    
+</style>
+
+<body style="height: calc(100% - .5rem);">
+    <div class="y-navtop">
+        <i class="back retreat"></i>
+        <span>账号绑定与安全</span>
+        <i></i>
+    </div>
+    <div class="safetop safemain">
+        <ul>
+            <li class="change-nn">
+                <div class="safe-img">
+                    <img src="./images/phoneicon.png" alt="">
+                    <span>手机号</span>
+                </div>
+                <span class="phone-number">188****8766</span>
+            </li>
+            <li class="change-psw">
+                <div class="safe-img">
+                    <img src="./images/messageicon.png" alt="">
+                    <span>修改密码</span>
+                </div>
+                <i class="righticon2" style="margin-top: .02rem;"></i>
+            </li>
+        </ul>
+    </div>
+    <p class="media-account">社交账号</p>
+    <div class="safetop ">
+        <ul>
+            <li>
+                <div class="safe-img">
+                    <img src="./images/wechaticon.png" alt="">
+                    <span>Daisy</span>
+                </div>
+                <!-- <span class="notbinding">未绑定<i class="righticon2"></i></span> -->
+                <span class="binding mui-btn mui-btn-blue mui-btn-outlined confirmBtn"><span class="bang">已绑定</span> <i
+                        class="righticon2"></i></span>
+
+            </li>
+            <li>
+                <div class="safe-img">
+                    <img src="./images/sinaicon.png" alt="">
+                    <span>微博</span>
+                </div>
+                <span class="binding mui-btn mui-btn-blue mui-btn-outlined confirmBtn"><span class="bang">已绑定</span><i
+                        class="righticon2"></i></span>
+
+            </li>
+            <li>
+                <div class="safe-img">
+                    <img src="./images/QQ.png" alt="">
+                    <span>QQ</span>
+                </div>
+                <!-- <span class="notbinding">未绑定<i class="righticon2"></i></span> -->
+                <span class="binding mui-btn mui-btn-blue mui-btn-outlined"><span class="bang">已绑定</span><i
+                        class="righticon2"></i></span>
+
+            </li>
+        </ul>
+    </div>
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script>
+        window.onload = function () {
+            var retreat = document.getElementsByClassName('retreat')[0];
+            retreat.onclick = function () {
+                window.history.go(-1);
+            }
+        }
+        // 点击绑定时变换
+        let that = null
+        mui(".binding").on('tap', ".bang", function () {
+            if (this.innerHTML == "已绑定") {
+                that = this
+                var btnArray = ['算了', '确定'];
+                mui.confirm('确定要解绑吗？', '', btnArray, function (e) {
+                    if (e.index == "1") {
+                        that.innerHTML = '未绑定';
+                    }
+                })
+            } else {
+                mui.toast("绑定成功")
+                that.innerHTML = "已绑定"
+            }
+        });
+        mui(".safetop").on("tap", ".change-nn", function () {
+            location.href = "ChangePhone.html"
+        })
+        mui(".safetop").on("tap", ".change-psw", function () {
+            location.href = "ChangePassword.html"
+        })
+    </script>
+</body>
+
+</html>

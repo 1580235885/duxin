@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="css/MineTop.css">
+    <title>我的收藏</title>
+</head>
+<style>
+.pic  a{
+    color: #333 !important;
+    font-size: .15rem;
+}
+.mui-toast-container {
+        bottom: 50% !important;
+    }
+    .mui-toast-message{
+        background: url(./images/w_list7.png) no-repeat center .2rem #000;
+        width: 2.5rem;
+        padding: .7rem .05rem .1rem .05rem;
+        opacity: .6;
+        color: #fff;
+        height: 1rem;
+    }
+    .collection-item ul li p {
+        margin-bottom: 0;
+    }
+    .collection-item ul li {
+        display:flex ;
+        justify-content: start;
+        padding: .1rem .2rem;
+    }
+    .collection-folder {
+        width: 1.6rem;
+        margin: 0 .2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: .05rem 0;
+    }
+</style>
+<body style="height: calc(100% - .5rem);">
+    <div class="y-navtop">
+        <i class="back retreat"></i>
+        <span>我的收藏</span>
+        <a href="CreateFolder.html"><span class="creation">创建</span></a>
+    </div>
+    <div class="creationnum">共创建了<span>3</span>个收藏夹</div>
+    <div class="collection-item">
+        <ul>
+            <li >
+                <div class="collection-img">
+                    <img src="./images/collectionimg1.png" alt="" class="CollectionDetail">
+                </div>
+                <div class="collection-folder">
+                    <p>
+                        <span>默认收藏夹</span>
+                        <a href="#picture"><i class="collection-more"></i></a>
+                    </p>
+                    <p class="public-text">133篇文章·公开</p>
+                </div>
+            </li>
+            <li >
+                <div class="collection-img">
+                    <img src="./images/collectionimg2.png" alt="" class="CollectionDetail">
+                </div>
+                <div class="collection-folder">
+                    <p>
+                        <span>建筑设计</span>
+                        <a href="#picture"><i class="collection-more"></i></a>
+                        
+                    </p>
+                    <p class="public-text">133篇文章·公开</p>
+                </div>
+            </li>
+            <li >
+                <div class="collection-img">
+                    <img src="./images/collectionimg3.png" alt="" class="CollectionDetail">
+                </div>
+                <div class="collection-folder">
+                    <p>
+                        <span>科技</span>
+                        <a href="#picture"><i class="collection-more"></i></a>
+                    </p>
+                    <p class="public-text">133篇文章·公开</p>
+                </div>
+            </li>
+            <p class="nohave">没有了~</p>
+        </ul>
+    </div>
+    <div id="picture" class="mui-popover pic mui-popover-action mui-popover-bottom">
+        <ul class="mui-table-view article-share">
+            <li class="mui-table-view-cell edit-collection">
+                <a href="./CreateFolder.html">编辑</a>
+            </li>
+            <li class="mui-table-view-cell article-del">
+                <a href="javascript:void(0)">删除</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#picture"><b>取消</b></a>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/MineTop.js"></script>
+    <script src="./js/dynamic.js"></script>
+    <script>
+        // mui('body').on('tap','a',function(){ 
+        // 	window.top.localtion.href=this.href
+        // });
+        window.onload=function() {
+            var retreat = document.getElementsByClassName('retreat')[0];
+            retreat.onclick = function() {
+                window.history.go(-1);
+            }
+        }
+      mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		mui('body').on('shown', '.mui-popover', function(e) {
+            e.stopPropagation()
+			//console.log('shown', e.detail.id);//detail为当前popover元素
+		});
+		mui('body').on('hidden', '.mui-popover', function(e) {
+            e.stopPropagation()
+			//console.log('hidden', e.detail.id);//detail为当前popover元素
+		});
+		// var info = document.getElementById("info");
+		mui('body').on('tap', '.mui-popover-action li>a', function(e) {
+            e.stopPropagation()
+			var a = this,
+				parent;
+			//根据点击按钮，反推当前是哪个actionsheet
+			for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+				if (parent.classList.contains('mui-popover-action')) {
+					break;
+				}
+			}
+			//关闭actionsheet
+			mui('#' + parent.id).popover('toggle');
+			// info.innerHTML = "你刚点击了\"" + a.innerHTML + "\"按钮";
+        })
+        // 点击时间后的三个点后的删除
+        mui(".pic").on('tap', ".article-del", function () {
+
+            var btnArray = ['取消', '确定'];
+            mui.confirm(`确定删除该收藏夹及收藏的文章吗？`, '',btnArray, function (e) {
+                if (e.index == 1) {
+                    mui.toast("删除成功")
+                } else {
+                    
+                }
+            })
+        });
+        mui("#picture").on("tap",".edit-collection",function(){
+           location.href="CreateFolder.html"
+        })
+        mui(".y-navtop").on("tap",".creation",function(){
+           location.href="CreateFolder.html"
+        })
+        // 点击 相应的收藏夹会跳转相应的页面
+       mui(".collection-item").on('tap','.collection-item ul li img',function(){
+           location.href=this.className+'.html'
+       })
+    
+        </script>
+</body>
+</html>

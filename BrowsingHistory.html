@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/MineTop.css">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/MineTop.js"></script>
+    <title>浏览记录</title>
+</head>
+<style>
+    p {
+        margin-bottom: 0;
+    }
+   
+    .mine-checked{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: .1rem;
+    }
+    .myArticle li {
+    padding: .2rem .2rem .2rem 0.1rem;
+}
+.checked {
+    width: .2rem;
+    height: .2rem;
+    display: inline-block;
+    background-size: 100%;
+}
+.checked-ok {
+    width: .2rem;
+    height: .2rem;
+}
+.checked {
+    background: url(./images/w_list8.png) no-repeat 0 0;
+}
+.checked-ok {
+    background:url(./images/u221.png) no-repeat 0 0;
+    background-size: 100%;
+}
+.mine-checked {
+    display: none;
+}
+.article-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem .2rem ;
+    color: #999;
+}
+.bbt {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+.collection-folder {
+    margin-left: .1rem;
+}
+.mui-toast-container {
+    bottom: 50% !important;
+}
+
+.mui-toast-message {
+    background: url(./images/w_list7.png) no-repeat center .2rem #000;
+    width: 2.5rem;
+    padding: .7rem .05rem .1rem .05rem;
+    opacity: .8;
+    color: #fff;
+    height: 1rem;
+}
+</style>
+<body style="height: calc(100% -.5rem);">
+    <div class="y-navtop">
+        <i class="back retreat"></i>
+        <span>浏览记录</span>
+        <span class="manger">管理</span>
+    </div>
+    <div class="myArticle record-item">
+        <ul>
+            <li>
+                <div class="mine-checked">
+                    <i class="checked"></i>
+                </div>
+                <div class="record-img">
+                    <img src="./images/record1.png" alt="">
+                </div>
+                <div class="collection-folder">
+                    <p class="record-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                    <p class="author-box">
+                        <span class="myarticle-time"><i class="lookicon"></i> 30636</span>
+                        <span class="author-details">Daisy 16分钟</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="mine-checked">
+                    <i class="checked"></i>
+                </div>
+                <div class="record-img">
+                    <img src="./images/record2.png" alt="">
+                </div>
+                <div class="collection-folder">
+                    <p class="record-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                    <p class="author-box">
+                        <span class="myarticle-time"><i class="lookicon"></i> 30636</span>
+                        <span class="author-details">Daisy 16分钟</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="mine-checked">
+                    <i class="checked"></i>
+                </div>
+                <div class="record-img">
+                    <img src="./images/record3.png" alt="">
+                </div>
+                <div class="collection-folder">
+                    <p class="record-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                    <p class="author-box">
+                        <span class="myarticle-time"><i class="lookicon"></i> 30636</span>
+                        <span class="author-details">Daisy 16分钟</span>
+                    </p>
+                </div>
+            </li>
+            <p class="nohave">没有了~</p>
+        </ul>
+    </div>
+    <div class="bbt">
+        <div class="article-bottom">
+            <div class="mine-checked all-ok okk">
+                <i class="checked"></i><span >全选</span>
+            </div>
+            <div class="mine-del">删除</div>
+        </div>
+    </div>
+    
+    <script>
+        function text() {
+            for (let i = 0; i < $(".record-title").length; i++) {
+                $(".record-title")[i].innerHTML = $(".record-title")[i].innerHTML.slice(0, 13) + '···'
+            }
+        }
+        text()
+        mui('.mine-checked').on('tap','.checked',function(){
+            if($(this).hasClass("checked-ok")){
+                $(this).removeClass("checked-ok")
+            }else {
+                $(this).addClass("checked-ok")
+            }
+        })
+        mui(".y-navtop").on('tap','.manger',function(){
+            if($(this)[0].innerHTML=="管理"){
+                $(this)[0].innerHTML='取消'
+                $(".mine-checked").css('display',"flex")
+                $('.bbt').show()
+            }else {
+                $(this)[0].innerHTML="管理"
+                $(".bbt")[0].style.display="none"
+                $(".mine-checked").hide()
+                $('.bbt').hide()
+            }
+        })
+        // 点击全选
+        mui(".bbt").on("tap",'.all-ok',function(){
+            if($(this).hasClass("okk")){
+                $(".checked").addClass("checked-ok")
+                $(this).removeClass("okk")
+            }else {
+                $(".checked").removeClass("checked-ok")
+                $(this).addClass("okk")
+            }
+        })
+        // 点击删除
+        mui(".bbt").on('tap','.mine-del',function(){
+            
+            var btnArray = ['取消', '确定'];
+            mui.confirm(``,'确定删除浏览记录吗？', btnArray, function (e) {
+                if (e.index == 1) {
+                    mui.toast("删除成功")
+                } else {
+
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

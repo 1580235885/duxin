@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/dynamic.css">
+
+    <link rel="stylesheet" href="./css/MineTop.css">
+    <title>PersonPage</title>
+</head>
+<style>
+    .mui-toast-container {
+        bottom: 50% !important;
+    }
+    .mui-toast-message{
+        background: url(./images/w_list7.png) no-repeat center .2rem #000;
+        width: 2.5rem;
+        padding: .7rem .05rem .1rem .05rem;
+        opacity: .8;
+        color: #fff;
+        height: 1rem;
+    }
+    .reportbox1 input[type="checkbox"]{
+        -webkit-appearance: radio;
+        margin-right: .1rem;
+    }
+   .reportbox1 ul {
+        list-style:none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0.1rem .4rem;
+    }
+    .reportbox1 {
+        margin: 1.5rem .5rem;
+        position:fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        border-radius: 10px;
+        z-index: 99;
+        display: none;
+    }
+    .reportbox1 h4 {
+        font-size: .15rem;
+        text-align: center;
+        height: 0.3rem;
+        line-height: .3rem;
+    }
+    .reportbox1 ul li{
+        float: left;
+        font-size: .15rem;
+        margin-right: .1rem;
+        margin-bottom: .2rem;
+    }
+    .tab-ar-right {
+    	margin-left: .1rem;
+}
+    .canclereport {
+        border: 1px solid #3d7eff;
+        border-radius: 4px;
+        padding: .05rem .2rem;
+        margin-right: .3rem;
+    }
+.okreport {
+        background: #3d7eff;
+        color: #fff;
+        padding: .05rem .2rem;
+        border-radius: 4px;
+    }
+    .all {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .4);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .okk {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <div class="person-container">
+        <div class="y-navtop">
+            <i class="back retreat"></i>
+            <span>他的动态</span>
+            <a href="#forward"><i class="more"></i></a>
+
+        </div>
+        <div class="y-personpage">
+            <div class="personage">
+                <div class="personagetop">
+                    <i class="personicon"></i>
+                    <i class="sex"></i>
+                </div>
+                <div class="righticon">
+                    <span class="attention"><i class="attentionicon"></i><span class="attention-text">关注</span> </span>
+                    <span class="message">
+                        <i class="bga"></i>
+                        <i class="messageicon"></i>
+                    </span>
+                </div>
+            </div>
+            <p class="personname">特立独行的猫</p>
+            <p class="personview">与你分享我的观点，weibo:Alex Wang</p>
+        </div>
+        <div class="y-personitem">
+            <ul>
+                <li>
+                    <p class="y-personnum">232</p>
+                    <p>赞</p>
+                </li>
+                <li>
+                    <p class="y-personnum">269</p>
+                    <p>收藏</p>
+                </li>
+                <li>
+                    <p class="y-personnum">143</p>
+                    <p>关注</p>
+                </li>
+                <li>
+                    <p class="y-personnum">222</p>
+                    <p>粉丝</p>
+                </li>
+            </ul>
+        </div>
+        <div class="y-person-detail">
+            <div class="tab-item">
+                <ul>
+                    <li class="iconactive">动态</li>
+                    <li>文章</li>
+                    <li>资料</li>
+                </ul>
+            </div>
+            <div class="tab-details">
+                <ul>
+                    <li class="dong">
+                        <div class="dynamic">
+                            <div class="w_dynmic-list dong-list">
+                                <ul class="w_dynic-ul dong-de" id="w_dynic-ul1">
+                                    <li class="w_dynic-li">
+                                        <div class="w_dynic-list1">
+                                            <a class="w_dynica" href="javascript:void(0)">
+                                                <img class="w_dynica-img1"
+                                                    src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C/u764.png"
+                                                    alt="">
+                                                <div class="w_dynica-list">
+                                                    <p class="w_dynica-list1">十点新闻</p>
+                                                    <p class="w_dynica-list2">2018-05-06 10:56:56</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" id="reportshe" class="mui-btn">
+                                                <img class="w_dynica-img2" src="images/report.png"></img>
+                                            </a>
+                                        </div>
+                                        <div class="w_dynic-list2">
+                                            <a href="javascript:void(0)">
+                                                <p>5月4日，苹果首席执行官库克接受了ABC
+                                                    News的采访谈到隐私保护表示，苹果通过应用程序商店，在应用程序上赚钱，但不会在脸书上赚钱，而在谷歌浏览器上赚钱。因为相信谷歌是最好的浏览器。
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <a class="w_dynic-list3" href="javascript:void(0)">
+                                            <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1702.png"
+                                                alt="">
+                                            <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1703.png"
+                                                alt="">
+                                            <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1704.png"
+                                                alt="">
+                                        </a>
+                                        <div class="w_dynic-list4">
+                                            <div id="w_dynic-lt1">
+                                                <img src="images/w_list1.png" class=""></img>
+                                                <p>122</p>
+                                            </div>
+                                            <a href="javascript:void(0)">
+                                                <img class="w_dynic-ig" src="images/w_list2.png" alt="">
+                                                <p>12</p>
+                                            </a>
+                                            <div>
+                                                <img src="./images/w_list3.png" alt="">
+                                                <p>25</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="w_dynic-li">
+                                        <div class="w_dynic-list1">
+                                            <a class="w_dynica" href="javascript:void(0)">
+                                                <img class="w_dynica-img1"
+                                                    src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C/u764.png"
+                                                    alt="">
+                                                <div class="w_dynica-list">
+                                                    <p class="w_dynica-list1">十点新闻</p>
+                                                    <p class="w_dynica-list2">2018-05-06 10:56:56</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)" id="reportshe" class="mui-btn">
+                                                <img class="w_dynica-img2" src="images/report.png"></img>
+                                            </a>
+                                        </div>
+                                        <div class="w_dynic-list2">
+                                            <a href="javascript:void(0)">
+                                                <p>5月4日，苹果首席执行官库克接受了ABC
+                                                    News的采访谈到隐私保护表示，苹果通过应用程序商店，在应用程序上赚钱，但不会在脸书上赚钱，而在谷歌浏览器上赚钱。因为相信谷歌是最好的浏览器。
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <a class="w_dynic-list3" href="javascript:void(0)">
+                                            <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1702.png"
+                                                alt="">
+                                            <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1703.png"
+                                                alt="">
+                                            <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1704.png"
+                                                alt="">
+                                        </a>
+                                        <div class="w_dynic-list4">
+                                            <div id="w_dynic-lt1">
+                                                <img src="images/w_list1.png" class=""></img>
+                                                <p>122</p>
+                                            </div>
+                                            <a href="javascript:void(0)">
+                                                <img class="w_dynic-ig" src="images/w_list2.png" alt="">
+                                                <p>12</p>
+                                            </a>
+                                            <div>
+                                                <img src="./images/w_list3.png" alt="">
+                                                <p>25</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tab-article">
+                            <div class="myArticle record-item tab-article-top">
+                                <ul class="tab-ul">
+                                    <li class="tab-li">
+                                        <div class="tab-ar-img">
+                                            <img src="./images/record1.png" alt="">
+                                        </div>
+                                        <div class="collection-folder tab-ar-right">
+                                            <p class="record-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                                            <p class="author-box">
+                                                <span class="myarticle-time"><i class="lookicon"></i> 30636</span>
+                                                <span class="author-details">Daisy 16分钟</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="tab-li">
+                                        <div class="tab-ar-img">
+                                            <img src="./images/record1.png" alt="">
+                                        </div>
+                                        <div class="collection-folder tab-ar-right">
+                                            <p class="record-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                                            <p class="author-box">
+                                                <span class="myarticle-time"><i class="lookicon"></i> 30636</span>
+                                                <span class="author-details">Daisy 16分钟</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="tab-li">
+                                        <div class="tab-ar-img">
+                                            <img src="./images/record1.png" alt="">
+                                        </div>
+                                        <div class="collection-folder tab-ar-right">
+                                            <p class="record-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                                            <p class="author-box">
+                                                <span class="myarticle-time"><i class="lookicon"></i> 30636</span>
+                                                <span class="author-details">Daisy 16分钟</span>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <p class="nohave">没有了~</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tab-data">
+                            <p>现居地 <span class="after"> 山东 青岛</span></p>
+                            <p>签名 <span class="after">与你分享我观点，微博：Alex Wang</span></p>
+                            <p class="tab-tit">社交账号</p>
+                            <p>QQ <span class="after">192882684</span></p>
+                            <p>微信 <span class="after">daisy0609</span></p>
+                            <p>微博 <span class="after">daisy</span></p>
+                            <p class="tab-tit">关注领域</p>
+                            <div class="field">
+                                <span>科技</span>
+                                <span>娱乐</span>
+                                <span>媒体</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="forward" class="mui-popover alert mui-popover-action mui-popover-bottom">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <div class="weblink">
+                        <img src="./images/wechaticon.png" alt=""><br>
+                        <a href="#">微信好友</a>
+                    </div>
+                    <div class="weblink">
+                        <img src="./images/friendicon.png" alt=""><br>
+                        <a href="#">朋友圈</a>
+                    </div>
+                    <div class="weblink">
+                        <img src="./images/weiboicon.png" alt=""><br>
+                        <a href="#">微信好友</a>
+                    </div>
+                </li>
+                <li class="mui-table-view-cell tex">
+                    <div class="weblink1 blackhe">
+                        <img src="./images/blacklist.png" alt=""><br>
+                        <a href="#forward"> 拉黑他</a>
+                    </div>
+                    <div class="weblink1 reporthe">
+                        <img src="./images/info.png" alt=""><br>
+                        <a href="#forward"> 举报他</a>
+                    </div>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a href="#forward"><b>取消</b></a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="reportbox1">
+        <h4>请选择举报原因</h4>
+        <ul>
+            <li><input type="checkbox" name="" id="ad"><label for="ad">垃圾广告</label></li>
+            <li><input type="checkbox" name="" id="ad1"><label for="ad1">有害信息</label></li>
+            <li><input type="checkbox" name="" id="ad2"><label for="ad2">涉嫌侵权</label></li>
+        </ul>
+        <ul class="okk">
+            <li class="canclereport">取消</li>
+            <li class="okreport">确定</li>
+        </ul>
+    </div>
+    <div class="all"></div>
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/dynamic.js"></script>
+    <script src="./js/MineTop.js"></script>
+    <script>
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        mui('body').on('shown', '.mui-popover', function (e) {
+            //console.log('shown', e.detail.id);//detail为当前popover元素
+        });
+        mui('body').on('hidden', '.mui-popover', function (e) {
+            //console.log('hidden', e.detail.id);//detail为当前popover元素
+        });
+        // var info = document.getElementById("info");
+        mui('body').on('tap', '.mui-popover-action li>a', function () {
+            var a = this,
+                parent;
+            //根据点击按钮，反推当前是哪个actionsheet
+            for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+                if (parent.classList.contains('mui-popover-action')) {
+                    break;
+                }
+            }
+            //关闭actionsheet
+            mui('#' + parent.id).popover('toggle');
+            // info.innerHTML = "你刚点击了\"" + a.innerHTML + "\"按钮";
+        })
+        var forward = document.getElementById("forward")
+        mui("#forward").on("tap", ".blackhe", function () {
+            forward.style.display = "none"
+            mui.toast("拉黑成功，将不受到他的消息")
+        })
+        // 主页点击举报显示遮罩
+        mui(".tex").on('tap', ".reporthe", function () {
+            forward.style.display = "none"
+            $(".reportbox1")[0].style.display="block"
+            $(".all")[0].style.display="block"
+        });
+        // 举报点击确定
+        mui(".okk").on('tap',".okreport",function(){
+            $(".reportbox1")[0].style.display="none"
+            $(".all")[0].style.display="none"
+           mui.toast("举报成功我们会尽快处理")
+        })
+        // 举报点击取消
+        mui(".okk").on('tap','.canclereport',function(){
+            $(".reportbox1")[0].style.display="none"
+            $(".all")[0].style.display="none"
+        })
+        // 实现个人主页上文章 动态 资料的tab切换    
+        mui(".tab-item").on("tap", "ul li", function () {
+            $(this).addClass("iconactive").siblings().removeClass("iconactive")
+            $(".tab-details>ul>li").eq($(this).index()).show().siblings().hide()
+        })
+        // 个人主页动态中的举报按钮
+        mui(".w_dynic-list1").on('tap', "#reportshe", function () {
+            forward.style.display = "none"
+            $(".reportbox1")[0].style.display="block"
+            $(".all")[0].style.display="block"
+        });
+    </script>
+</body>
+
+</html>

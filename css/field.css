@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    font-size: 100px;
+    height: auto;
+    background: #ffffff!important;
+}
+.content-li{
+    width: 95%;
+    margin:0 auto;
+    height: auto;
+
+}
+.top-li{
+    width: 95%;
+    margin: 0 auto;
+    height: 0.4rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position:fixed;
+    z-index: 999;
+    top: 0px;
+    left: 9px;
+}
+.text p{
+    font-size: 0.25rem;
+    color: #333333;
+}
+.top-right p{
+    font-size: 0.18rem;
+    color: #333333;
+}
+.top-right{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.03rem;
+}
+
+.container-three{
+    width: 100%;
+    height: 1.2rem;
+    margin: 0.1rem auto;
+    overflow: hidden;
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 0.44rem;
+}
+.text-one{
+    width: 1.8rem;
+    height: 0.40rem;
+    line-height: 0.15rem;
+    word-wrap: break-word;
+    color: #333;
+    font-size: 0.1rem;
+    float: right;
+}
+.text-two{
+    width: 2.16rem;
+    height: 0.6rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.bottom-one{
+    width: 1.0rem;
+    height: 0.24rem;
+    font-size: 0.125rem;
+    color: #999999;
+    display: flex;
+    align-items: flex-end;
+   
+}
+.text-three{
+    font-size: 0.125rem;
+    color: #999999;
+}
+.right-one{
+    display: flex;
+    justify-content: flex-end;
+    float: left;
+}
+.right-one img{
+    width: 1.40rem;
+    height: 0.94rem;
+}
+.container-four{
+    width: 100%;
+    /* height: 1.2rem; */
+    overflow: hidden;
+    border-bottom: 1px solid #f2f2f2;
+}
+.top-one{
+    width:100%;
+    height: auto;
+    font-size: 0.14rem;
+    color: #333333;
+}
+.mui-slider-item{
+    float: left;
+    margin: -0.09rem 0.11rem 0 0;
+    width: 1.07rem;
+    height: 1.10rem;
+}
+.mui-slider-item img{
+    width: 1.07rem;
+    height: 0.82rem;
+}
+.text-ten{
+    width: 2.16rem;
+    display: flex;
+    align-items: center;
+}
+.bottom-two{
+    width: 1.0rem;
+    height: 0.24rem;
+    font-size: 0.125rem;
+    color: #999999;
+    display: flex;
+    align-items: center;
+   
+}
+.text-four{
+    font-size: 0.125rem;
+    color: #999999;
+}

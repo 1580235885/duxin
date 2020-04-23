@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>反馈</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/bus.css"/>
+	 	<script src="js/mui.min.js"></script>
+	 	<script src="js/bus.js"></script>
+	</head>
+	<style type="text/css">
+		
+		body {
+			background-color: #fff;
+		}
+		.feedback {
+			background-color: #F2F2F2;
+		}
+		.feedback .type {
+			background-color: #ffffff;
+			padding: .1rem 4%;
+		}
+		.feedback .type>p {
+			color: #333333;
+			font-size: .14rem;
+			margin-bottom: .3rem;
+		}
+		.feedback .type>p span {
+			color: #ff0000;
+		}
+		.feedback .type ul li {
+			width: 50%;
+			float: left;
+			margin-bottom: .3rem;
+		}
+		.feedback .type ul li label {
+			font-size: .14rem;
+			padding-left: .3rem;
+			color: #666;
+		}
+		.feedback .type ul li:last-child {
+			margin-bottom: .1rem;
+		}
+		.suggest a {
+			display: block;
+			margin-top: .4rem;
+		    width: .8rem;
+		    height: .8rem;
+		    border: .01rem dashed #ccc;
+		    text-align: center;
+		}
+		.suggest .mui-icon {
+			font-size: .36rem;
+			font-weight: bolder;
+			color: #ccc;
+			margin-top: .22rem;
+		}
+		.feedback .suggest, .contac,.submit {
+			background-color: #ffffff;
+			margin-top: .05rem;
+			padding: .1rem 4%;
+		}
+		.suggest p, .contac p{
+			color: #333;
+			margin: .05rem 0;
+		}
+		.suggest input,.contac input {
+			border: 0;
+			outline: none;
+			font-size: .12rem;
+			color: #666;
+			padding: 0;
+			height: .3rem;
+			margin-top: .05rem;
+		}
+		.submit button {
+			color: #fff;
+			font-size: .14rem;
+			background-color: #3D7EFF;
+			width: 100%;
+			height: .44rem;
+			border: 0;
+			outline: none;
+			margin-top: .05rem;
+		}
+		.mui-checkbox input[type=checkbox]:before {
+		    font-size: .2rem;
+		    position: absolute;
+		    top: -0.02rem;
+		    left: -0.2rem;
+		}
+		.mui-checkbox input[type=checkbox]:checked:before {
+			color: #ff0000;
+		}
+	</style>
+	<body>
+		<header>
+		    <a class="retreat" href="javascript:void(0)">
+		    	<img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/交互规范_组件/u194.png"/>
+		    </a>
+		    <h1 class="title">反馈建议</h1>
+		    <a href="javascript:void(0)"></a>
+		</header>
+		<div class="feedback">
+			<div class="type">
+				<p>请选择反馈类型<span>*</span></p>
+				<ul class="clearfix">
+					<li class="mui-checkbox mui-left">
+						<input type="checkbox" name="checkbox" id="checkbox" value=""/>
+						<label for="checkbox">垃圾广告</label>
+					</li>
+					<li class="mui-checkbox mui-left">
+						<input type="checkbox" name="checkbox" id="checkbox" value=""/>
+						<label for="checkbox">有害信息</label>
+					</li>
+					<li class="mui-checkbox mui-left">
+						<input type="checkbox" name="checkbox" id="checkbox" value=""/>
+						<label for="checkbox">涉嫌侵权</label>
+					</li>
+				</ul>
+			</div>
+			<div class="suggest">
+				<p>问题和意见</p>
+				<input type="text" placeholder="请描述你要反馈的问题，我们会尽快回复哦~" value="" />
+				<a href="">
+					<span class="mui-icon mui-icon-plusempty"></span>
+				</a>
+			</div>
+			<div class="contac">
+				<p>联系方式</p>
+				<input type="text" placeholder="请留下您的联系邮箱" value="" />
+			</div>
+			<div class="submit">
+				<button>提交</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

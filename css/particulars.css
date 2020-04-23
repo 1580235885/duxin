@@ -1,0 +1,275 @@
+/*particulars的样式  */
+body {
+    background: #fff;
+}
+.w_paticulars-top {
+    width: 100%;
+    padding: .17rem;
+}
+.w_paticulars-a {
+     float: left;
+}
+.w_paticulars-a  img{
+    width: .18rem;
+}
+.w_paticulars-sp {
+    font-size: .18rem;
+    text-align: center;
+    display: inherit;
+}
+.w_part-list {
+    padding: 0 .15rem;
+}
+.w_part-title {
+    height: .23rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: .16rem;
+}
+.w_part-ul {
+    margin-top: .2rem;
+}
+.w_part-li {
+    display: flex;
+    flex: 1;
+}
+.w_part-list1 {
+    width: .3rem;
+    margin-right: .1rem;
+}
+.w_part-list1 img{
+    width: 100%;
+}
+.w_part-cont1 {
+    display: flex;
+    justify-content: space-between;
+}
+.w_part-list2 {
+   font-size: .12rem;
+   color: #999;
+}
+.w_author-img3 {
+    width: .16rem;
+    height: .16rem;
+}
+.w_part-cont2 p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+}
+.w_part-cont3 {
+    display: flex;
+    justify-content: space-between;
+    margin: .15rem 0;
+}
+.w_part-cont3 img {
+    width: .16rem;
+    height: .16rem;
+}
+.w_cont3-sp {
+    margin: 0 .2rem 0 .1rem;
+}
+.w_cont4-sp1 {
+  font-size: .14rem;
+  color: #333;
+}
+.w_cont4-sp2 {
+  color: #666;
+  line-height: .2rem;
+}
+.w_part-cont4 {
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 4px;
+    padding: .1rem;
+}
+.w_cont4-list {
+    display: flex;
+    justify-content: space-between;
+    margin: .1rem 0;
+}
+.w_cont-rig img{
+  width: .16rem;
+  height: .16rem;
+}
+.w_cont4-img3 {
+  margin-left: .2rem;
+}
+.w_foot-part {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    padding: .15rem;
+    padding-bottom: 0;
+    background: #fff;
+    width: 100%;
+    border-top: .01rem solid #f2f2f2;
+}
+.w_foot-input {
+    width: 1.24rem!important;
+    height: .3rem!important;
+    color: rgb(153, 153, 153)!important;
+    background-color: #f2f2f2!important;
+    border-radius: .3rem!important;
+    border: 0!important;
+    font-size: .12rem;
+}
+.w_dynic-list4 {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-left: .15rem;
+    align-items: center;
+}
+.w_dynic-list4 img{
+    width: .2rem;
+}
+.w_dynic-ig {
+    width: .24rem !important;
+    margin-top: -4px;
+}
+
+.w_foot-got {
+    margin-right: .1rem;
+}
+.w_dynic-li {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: .1rem;
+    margin-bottom: .2rem;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+.w_part-show {
+    width: 2rem;
+    height: .32rem;
+    overflow: hidden;
+    position: relative;
+    top: -0.1rem;
+    left: 0.1rem;
+}
+.w_part-over {
+	display: none;
+    position: relative;
+    left: 1.55rem;
+    transition: all 1s;
+}
+.w_backimg {
+    transform: rotate(270deg);
+    position: absolute;
+    top: -0.8rem;
+    left: 1rem;
+}
+.w_backimg img {
+    transform: scale(.8);
+}
+.w_part-out {
+    display: flex;
+    position: absolute;
+    left: 0.45rem;
+    top: 0.05rem;
+}
+.w_part-out img {
+    width: .16rem;
+    height: .16rem;
+    margin: 0 .1rem;
+    vertical-align: -webkit-baseline-middle;
+}
+.w_part-out span {
+    vertical-align: sub;
+}
+.w_comment-lt {
+    position: fixed;
+    z-index: 9999;
+    height: 610px;
+    background: #fff;
+    bottom: 0;
+    width: 100%;
+    border-radius: .15rem .15rem 0 0;
+}
+.w_comment-lt1 {
+    display: flex;
+    justify-content: space-between;
+    padding: .15rem;
+    border-bottom: .01rem solid #f2f2f2;
+}
+.w_comment-lt1 span {
+    font-size: .12rem;
+    color: #999;
+}
+.w_comment-lt1 img {
+    width: .16rem;
+    height: .16rem;
+}
+.w_comment-lt2 {
+    width: 100%;
+    padding: .15rem;
+}
+.w_comment-lt2 input {
+    width: 80%;
+    color: #999;
+    border: 0;
+    padding: 0;
+}
+
+
+/*transpond的样式  */
+.w_transpond-top {
+    width: 100%;
+    padding: .17rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .18rem;
+}
+.w_transpond-top img {
+    width: .18rem;
+}
+.w_transpond-list {
+    padding: 0 .15rem;
+} 
+.w_transpond-list input{
+    width: 3rem;
+    height: .25rem;
+    font-size: .14rem;
+    color: #000000;
+    text-align: left;
+    border-color: transparent;
+}
+.w_transpond-list p {
+    margin-top: .5rem;
+    background-color: rgba(242, 242, 242, 0.498039215686275);
+    border: none;
+    border-radius: 4px;
+    line-height: .2rem;
+    padding: .15rem .1rem;
+    color: #333;
+ }
+.w_tran-sp1 {
+   font-weight:700;
+   font-size: .14rem;
+}
+.w_tran-sp2 {
+    font-size: .12rem;
+}
+
+
+
+
+
+ /* released的样式*/
+.w_release-add {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    text-align: center;
+    border: .01rem solid #f2f2f2;
+}
+.w_release-add img {
+    width: .28rem;
+    margin-top: 36%;
+}

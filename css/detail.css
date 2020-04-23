@@ -1,0 +1,379 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    position: relative;
+    height: 100%;
+  }
+.container{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.top img{
+    width: 100%;
+    height: 2.64rem;
+}
+.container{
+    position: relative;
+}
+.img-one{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+.unnamed{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+.text{
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.container1{
+    width: 100%;
+    height: 3126px;
+    background-color: #fff;
+    position: absolute;
+    top: 82%;
+    left: 0;
+    border-radius: 24px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+} 
+.center-one{
+    width: 95%;
+    height: auto;
+    margin: auto;
+}
+.center{
+    width: 95%;
+    height: 0.9rem;
+    margin:0.2rem auto;
+    border-bottom:1px solid #f2f2f2;
+}
+.left-one{
+    width: 2.52rem;
+    height: 0.24rem;
+}
+.left-one h3{
+    color: #333;
+    font-size:0.18rem;
+    width: 2.52rem;
+    height: 0.24rem;
+    display: flex;
+}
+.left-two{
+    width: 0.4rem;
+    height: 0.4rem;
+    display: inline-block;
+}
+.ancient-one{
+    width: 0.4rem;
+    height: 0.4rem;
+    display: flex;
+}
+.test-two{
+    font-size: 14px;
+    color: #333333;
+}
+.test-three{
+    width: 1.5rem;
+    height: 0.16rem;
+    font-size: .12rem;
+    color: #666666;
+}
+.inline{
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 0 0.05rem;
+}
+.line{
+    display: flex;
+    width: 100%;
+    margin: 0.1rem 0 0 0;
+}
+.test-four{
+    width: 0.66rem;
+    height: 0.25rem;
+    background: #3d7eff;
+    color: #ffffff;
+    font-size: 0.12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.test-four span{
+    vertical-align: top;
+}
+.flex-one{
+    display: flex;
+    align-items: center;
+}
+.line-feed{
+    color: #999999;
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+}
+.article{
+    width: 100%;
+    height: 0.7rem;
+}
+.article-one{
+    width: 100%;
+    height: 0.9rem;
+}
+.article-two{
+    width: 100%;
+    height: 0.5rem;
+}
+.article-three{
+    width: 100%;
+    height: 0.9rem;
+    border-bottom:1px solid #f2f2f2;
+}
+.three{
+    display: flex;
+}
+.project{
+    display: flex;
+    align-items: center;
+    width: 0.8rem;
+    height: 0.6rem;
+}
+.project-one{
+    width: 0.66rem;
+    height: 0.25rem;
+    background: #f2f2f2;
+    color: #3d7eff;
+    font-size: 0.12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+.shang{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.6rem;
+}
+.shang-one{
+    width: 0.88rem;
+    height: 0.35rem;
+    background: #ff9900;
+    color: #ffffff;
+    font-size: 0.14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+}
+.repetition img{
+    width: 0.3rem;
+    height: 0.30rem;
+    display: inline-block;
+    margin-left: -0.10rem;
+}
+.repetition{
+    display:flex;
+    height: 0.50rem;
+    justify-content: center;
+}
+/* 相关阅读 */
+.active p{
+    height:0.4rem;
+    display: flex;
+    font-size: 0.16rem;
+    align-items: center;
+    color: #333333;
+    font-weight: 700;
+}
+.container-three{
+    width: 100%;
+    height: 1.2rem;
+    margin: 0.1rem auto;
+    overflow: hidden;
+    border-bottom: 1px solid #f2f2f2;
+}
+.text-one{
+    width: 1.8rem;
+    height: 0.40rem;
+    line-height: 0.15rem;
+    word-wrap: break-word;
+    color: #333;
+    font-size: 0.1rem;
+}
+.text-two{
+    width: 2.1rem;
+    height: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.bottom-one{
+    width: 1.0rem;
+    height: 0.24rem;
+    font-size: 0.125rem;
+    color: #999999;
+    display: flex;
+    align-items: flex-end;
+   
+}
+.text-three{
+    font-size: 0.125rem;
+    color: #999999;
+}
+.right-one{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -1.0rem;
+}
+.right-one img{
+    width: 1.40rem;
+    height: 0.94rem;
+}
+/* 评论区 */
+.comment{
+    width: 100%;
+    /* height: 1.2rem; */
+    overflow: hidden;
+    margin: auto;
+    border-bottom: 1px solid #f2f2f2;
+}
+.left-img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+.left-img img{
+    width: 30px;
+    height: 30px;
+}
+.comment-top{
+    width: 100%;
+    height: 0.16rem;
+    color: #999999;
+    font-size: 0.12rem;
+    display: flex;
+    justify-content: space-between;
+}
+.left-cai{
+    display: flex;
+    width: 100%;
+}
+.comment-text p{
+    font-size: 0.14rem;
+    color: #333333;
+    width: 3.0rem;
+    margin-left: 0.30rem;
+    word-break: break-word
+}
+.comment-bottom{
+    width: 100%;
+    height: 0.3rem;
+    font-size: 12px;
+    color: #999999;
+}
+.left-zan{
+    float: right;
+    margin: 0 0.10rem;
+}
+.num{
+    float: right;
+    margin: 0 10px;
+}
+.cloud{
+    float: right;
+    margin: 0 0.10rem;
+}
+.left-day{
+    margin-left: 0.28rem;
+}
+.null{
+    width: 100%;
+    height: 0.2rem;
+}
+.middle-li{
+    width: 3.02rem;
+    height: 1.03rem;
+    background-color: rgba(242, 242, 242, 1);
+    float: right;
+    margin: 0.15rem 0.12rem 0.1rem 0.1rem;
+}
+.new{
+    margin: 10px -1px 2px -24px;
+}
+.footer{
+    width: 100%;
+    height: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    bottom: -15px;
+    width: 95%;
+    left: 10px;
+    border-top: 1px solid #f2f2f2;
+    background: #ffffff;
+}
+.input {
+    width: 1.24rem;
+    height: 0.30rem;
+    display: flex;
+}
+.input input{
+    width: 1.24rem;
+    height: 0.30rem;
+    background: #f2f2f2;
+    border-radius: 0.50rem;
+    border: none;
+}
+.num-one span{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.collect span{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.comment-two span{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.num-one{
+    display: flex;
+    width: 0.25rem;
+    flex-direction: column;
+}
+.collect img{
+    width: 0.16rem;
+    height: 0.16rem;
+}
+.collect span{
+    color: #333333;
+    font-size:0.12rem;
+}
+.collect{
+    display: flex;
+    width: 0.25rem;
+    flex-direction: column;
+}
+.email img{
+    width: 0.16rem;
+    height: 0.16rem;
+}
+.email span{
+    color: #333333;
+    font-size:0.12rem;
+}
+.email{
+    display: flex;
+    width: 0.25rem;
+    flex-direction: column;
+}

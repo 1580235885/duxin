@@ -1,0 +1,110 @@
+html {
+	font-size: 100px;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	line-height: 1.5;
+	padding-top: .44rem;
+	position: relative;
+	
+}
+header {
+	position: fixed;
+	z-index: 8;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: .44rem;
+	display: flex;
+	background-color: #fff;
+	justify-content: space-between;
+	align-items: center;
+	opacity: 0.5;
+	transition: all .6s;
+}
+header:first-child {
+	left: 0;
+	opacity: 1;
+	z-index: 9;
+}
+header a img {
+	height: .18rem;
+	display: block;
+}
+header a {
+	padding: .1rem .1rem;
+	border-radius: 50%;
+	margin-left: .05rem;
+}
+header .save {
+	padding-right: .15rem;
+}
+header .title {
+	font-size: .18rem;
+	color: #333;
+	font-weight: 400;
+    font-style: normal;
+}
+.header {
+	position: relative;
+}
+p,ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.content {
+	height: 100%;
+	background-color: #fff;
+	padding: 4%;
+	box-sizing: border-box;
+}
+header .save {
+	font-size: .14rem;
+	color: #3D7EFF;
+}
+ .clearfix:after{
+        content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.pull {
+	height: 100%;
+	padding-top: .44rem;
+	box-sizing: border-box;
+
+}
+.mui-scrollbar {
+	display: none;
+}
+/*.mui-poppicker {
+	display: none;
+}*/
+.box {
+	height: 100%;
+	position: relative
+}
+.tabPage {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	transition: all .6s; 
+	z-index: 2;
+	opacity: 0.5;
+}
+.tabPage:first-child {
+	left: 0;
+	z-index: 3;
+	opacity: 1;
+}
+.mui-popup {
+	width: 2.7rem;
+}

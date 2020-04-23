@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/serveno.css">
+    <title>Document</title>
+</head>
+<style>
+  html, body {
+         position: relative;
+         height: 100%;
+       }
+</style>
+<body>
+    <div class="container-one">
+        <div class="big-one">
+        <div class="input-one">
+            <img class="serve-one" src="./images/server.png" alt="">
+            <input class="input1" type="text" placeholder="搜索文章.作者">
+            <span class="cancle">取消</span>
+        </div>
+       </div>
+       <div class="middle">
+           <div class="img-one">
+               <img class="middle-one" src="./images/feiji.PNG" alt="">
+           </div>
+          
+         </div>
+         <div class="test">
+            <span>糟糕，没有找到与'UGC'相关的内容，换个关键词试试吧~</span>
+       </div>
+    </div>
+
+    <script>
+         function getWidth() {
+            var html = document.getElementsByTagName("html")[0]
+            html.style.fontSize = (html.clientWidth / 375 * 100) + "px"
+        }
+        getWidth()
+        window.onresize = function () {
+            getWidth()
+        }
+    </script>
+</body>
+</html>

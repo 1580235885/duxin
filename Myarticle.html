@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/dynamic.css">
+    <link rel="stylesheet" href="./css/MineTop.css">
+
+    <title>我的动态和文章</title>
+
+</head>
+<style>
+    .collection-folder p a {
+        color: #ccc;
+        width: .2rem;
+        height: auto;
+    }
+
+    #picture li a {
+        color: #333;
+        font-size: .15rem;
+    }
+
+    .mui-toast-container {
+        bottom: 50% !important;
+    }
+
+    .mui-toast-message {
+        background: url(./images/w_list7.png) no-repeat center .2rem #000;
+        width: 2.5rem;
+        padding: .7rem .05rem .1rem .05rem;
+        opacity: .8;
+        color: #fff;
+        height: 1rem;
+    }
+
+    .myArticle p {
+        margin-bottom: 0;
+    }
+
+    .mui-popup-inner {
+        padding: 0;
+        background: #fff;
+    }
+
+    .two-left {
+        display: inline-block;
+        margin: .2rem;
+    }
+
+    .mydynamic {
+        font-size: .15rem;
+    }
+
+    .nav-tt {
+	    line-height: .5rem;
+        margin-bottom: .15rem;
+    }
+
+    .nav-tt span {
+        margin-right: .35rem;
+    }
+
+
+    .dong-list {
+        margin-top: .2rem;
+    }
+
+    .dong-list li {
+        box-shadow: 2px 2px 10px rgba(215, 215, 215, 1);
+    }
+
+    /* 分享的样式 */
+    .article-sharebox {
+        padding: 1rem .4rem;
+    }
+
+    .article-title p {
+        font-size: .15rem;
+        color: #333;
+        padding: 0.1rem .15rem 0;
+        margin-bottom: 0;
+    }
+
+    .article-title img {
+        width: .24rem;
+        height: .24rem;
+    }
+
+    .twoleft {
+        font-size: .15rem;
+        padding-left: .2rem;
+    }
+
+    .twocode {
+        float: right;
+    }
+
+    .twocode img {
+        width: .54rem;
+        height: .54rem;
+    }
+
+    .article-title {
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .twocode span {
+        color: #999;
+        font-size: .15rem;
+        margin-bottom: .1rem;
+    }
+
+    .article-item img {
+        width: .4rem;
+        height: .4rem;
+    }
+
+    .article-item ul li p {
+        color: #fff;
+        margin-top: .1rem;
+    }
+
+    .article-item ul {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    .article-share {
+        text-align: center;
+        /* margin-top: .2rem; */
+        color: #fff;
+    }
+
+    .all {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .4);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .shade {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1111;
+        display: none;
+    }
+
+    .myArticle ul li {
+        padding: .2rem .2rem;
+        display:flex;
+        line-height: 1;
+    }
+    .collection-folder {
+        margin-left: .15rem;
+    }
+    .mui-popup-text {
+        height: .8rem;
+        line-height: .8rem;
+    }
+
+    .mydynamic,
+    .myArticle {
+        display: none;
+    }
+
+    .bbox>ul>li {
+        display: none;
+    }
+    #picture ul li a{
+        line-height: .62rem;
+    }
+</style>
+
+<body>
+    <div class="y-attention">
+        <i class="back1 retreat"></i>
+        <div class="nav-tt">
+            <span class="mineattention icon">我的文章</span>
+            <span class="minefans icon">我的动态</span>
+        </div>
+
+    </div>
+    <div class="bbox">
+        <ul>
+            <li style="display: block;" class="myArticle">
+                <div>
+                    <ul>
+                        <div class="allattention">共<span>3</span>篇文章</div>
+                        <li>
+                            <div class="collection-img">
+                                <img src="./images/collectionimg1.png" alt="">
+                            </div>
+                            <div class="collection-folder">
+                                <p class="myArticle-title" maxlength="15">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                                <p class="audit">审核中</p>
+                                <p>
+                                    <span class="myarticle-time">2018-05-15</span>
+                                    <a href="#picture">
+                                        <i class="collection-more"></i>
+                                    </a>
+
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collection-img">
+                                <img src="./images/collectionimg2.png" alt="">
+                            </div>
+                            <div class="collection-folder">
+                                <p class="myArticle-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                                <p class="audit-success">已发布</p>
+                                <p>
+                                    <span class="myarticle-time">2018-05-15</span>
+                                    <a href="#picture">
+                                        <i class="collection-more"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collection-img">
+                                <img src="./images/collectionimg3.png" alt="">
+                            </div>
+                            <div class="collection-folder">
+                                <p class="myArticle-title">首届UGD设计大会在京举办，引领增长时代的设计</p>
+                                <p class="audit-fail">审核失败，原因：标题中含有敏感词</p>
+                                <p>
+                                    <span class="myarticle-time">2018-05-15</span>
+                                    <a href="#picture">
+                                        <i class="collection-more"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </li>
+                        <p class="nohave">没有了~</p>
+                    </ul>
+                </div>
+            </li>
+            <li class="mydynamic">
+                <div>
+                    <ul>
+                        <li>
+                            <div class="dynamic">
+                                <div class="w_dynmic-list dong-list">
+                                    <ul class="w_dynic-ul dong-de" id="w_dynic-ul1">
+                                        <li class="w_dynic-li">
+                                            <div class="w_dynic-list1 tex">
+                                                <a class="w_dynica" href="javascript:void(0)">
+                                                    <img class="w_dynica-img1"
+                                                        src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C/u764.png"
+                                                        alt="">
+                                                    <div class="w_dynica-list">
+                                                        <p class="w_dynica-list1">十点新闻</p>
+                                                        <p class="w_dynica-list2">2018-05-06 10:56:56</p>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0)" id="" class="mui-btn reportshe">
+                                                    <img class="w_dynica-img2" src="images/delicon.png"></img>
+                                                </a>
+                                            </div>
+                                            <div class="w_dynic-list2">
+                                                <a href="javascript:void(0)">
+                                                    <p>5月4日，苹果首席执行官库克接受了ABC
+                                                        News的采访谈到隐私保护表示，苹果通过应用程序商店，在应用程序上赚钱，但不会在脸书上赚钱，而在谷歌浏览器上赚钱。因为相信谷歌是最好的浏览器。
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <a class="w_dynic-list3" href="javascript:void(0)">
+                                                <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1702.png"
+                                                    alt="">
+                                                <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1703.png"
+                                                    alt="">
+                                                <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1704.png"
+                                                    alt="">
+                                            </a>
+                                            <div class="w_dynic-list4">
+                                                <div id="w_dynic-lt1">
+                                                    <img src="images/w_list1.png" class=""></img>
+                                                    <p>122</p>
+                                                </div>
+                                                <a href="javascript:void(0)">
+                                                    <img class="w_dynic-ig" src="images/w_list2.png" alt="">
+                                                    <p>12</p>
+                                                </a>
+                                                <div>
+                                                    <img src="./images/w_list3.png" alt="">
+                                                    <p>25</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="w_dynic-li">
+                                            <div class="w_dynic-list1 tex">
+                                                <a class="w_dynica" href="javascript:void(0)">
+                                                    <img class="w_dynica-img1"
+                                                        src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C/u764.png"
+                                                        alt="">
+                                                    <div class="w_dynica-list">
+                                                        <p class="w_dynica-list1">十点新闻</p>
+                                                        <p class="w_dynica-list2">2018-05-06 10:56:56</p>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0)" id="" class="mui-btn reportshe">
+                                                    <img class="w_dynica-img2" src="images/delicon.png"></img>
+                                                </a>
+                                            </div>
+                                            <div class="w_dynic-list2">
+                                                <a href="javascript:void(0)">
+                                                    <p>5月4日，苹果首席执行官库克接受了ABC
+                                                        News的采访谈到隐私保护表示，苹果通过应用程序商店，在应用程序上赚钱，但不会在脸书上赚钱，而在谷歌浏览器上赚钱。因为相信谷歌是最好的浏览器。
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <a class="w_dynic-list3" href="javascript:void(0)">
+                                                <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1702.png"
+                                                    alt="">
+                                                <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1703.png"
+                                                    alt="">
+                                                <img src="https://www.pmdaniu.com/storages/99649/b739b955e810f1cadeb4c1c946abdc83-57026/images/%E5%8A%A8%E6%80%81-%E5%85%B3%E6%B3%A8/u1704.png"
+                                                    alt="">
+                                            </a>
+                                            <div class="w_dynic-list4">
+                                                <div id="w_dynic-lt1">
+                                                    <img src="images/w_list1.png" class=""></img>
+                                                    <p>122</p>
+                                                </div>
+                                                <a href="javascript:void(0)">
+                                                    <img class="w_dynic-ig" src="images/w_list2.png" alt="">
+                                                    <p>12</p>
+                                                </a>
+                                                <div>
+                                                    <img src="./images/w_list3.png" alt="">
+                                                    <p>25</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="picture" class="mui-popover pic mui-popover-action mui-popover-bottom">
+        <ul class="mui-table-view ">
+            <li class="mui-table-view-cell article-share">
+                <a href="javascript:void(0)">分享</a>
+            </li>
+            <li class="mui-table-view-cell edit-c">
+                <a href="javascript:void(0)">编辑</a>
+            </li>
+            <li class="mui-table-view-cell article-del">
+                <a href="javascript:void(0)">删除</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="#picture"><b>取消</b></a>
+            </li>
+        </ul>
+    </div>
+    <div class="shade">
+
+        <div class="article-sharebox">
+            <img src="./images/article-share.png" alt="">
+            <div class="article-title">
+                <p>5月4日，苹果首席执行官库克接受了.....</p>
+                <p style="overflow: hidden;">
+                    <div class="twoleft">
+                        <img src="./images/shareicon.png" alt="">
+                        <span>十点新闻</span>
+                    </div>
+                    <div class="twocode">
+                        <span>扫描二维码查看</span>
+                        <img src="./images/twocode.png" alt="">
+                    </div>
+                </p>
+
+            </div>
+            <p class="article-share">分享</p>
+            <div class="article-item">
+                <ul>
+                    <li>
+                        <img src="./images/downicon.png" alt="">
+                        <p>保存图片</p>
+                    </li>
+                    <li>
+                        <img src="./images/article-wechat.png" alt="">
+                        <p>微信好友</p>
+                    </li>
+                    <li>
+                        <img src="./images/article-friend.png" alt="">
+                        <p>朋友圈</p>
+                    </li>
+                    <li>
+                        <img src="./images/article-weibo.png" alt="">
+                        <p>微博好友</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hidd"><img src="./images/cancelicon.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="all"></div>
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <!-- <script src="./js/MineTop.js"></script> -->
+    <script src="./js/dynamic.js"></script>
+    <script>
+        // mui('body').on('tap','a',function(){ 
+        // 	window.top.localtion.href=this.href
+        // });
+
+        // 后退一步
+        window.onload = function () {
+            var retreat = document.getElementsByClassName('retreat')[0];
+            retreat.onclick = function () {
+                window.history.go(-1);
+            }
+        }
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        mui('body').on('shown', '.mui-popover', function (e) {
+            //console.log('shown', e.detail.id);//detail为当前popover元素
+        });
+        mui('body').on('hidden', '.mui-popover', function (e) {
+            //console.log('hidden', e.detail.id);//detail为当前popover元素
+        });
+        // var info = document.getElementById("info");
+        mui('body').on('tap', '.mui-popover-action li>a', function () {
+            var a = this,
+                parent;
+            //根据点击按钮，反推当前是哪个actionsheet
+            for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+                if (parent.classList.contains('mui-popover-action')) {
+                    break;
+                }
+            }
+            //关闭actionsheet
+            mui('#' + parent.id).popover('toggle');
+            // info.innerHTML = "你刚点击了\"" + a.innerHTML + "\"按钮";
+        })
+        // 点击时间后的三个点后的删除
+        mui(".pic").on('tap', ".article-del", function () {
+            // var tt =$('.article-del').index($(this))
+            // console.log(tt)
+            var btnArray = ['取消', '确定'];
+            mui.confirm(`确定删除这篇文章吗？`, btnArray, function (e) {
+                if (e.index == 1) {
+                    // $(".myArticle li").index(tt).remove()
+                    mui.toast("删除成功")
+                } else {
+
+                }
+            })
+        });
+        // 点击我的动态后的删除图标
+        mui(".dong-de li").on('tap', ".reportshe", function () {
+            var cc = $(".reportshe").index($(this))
+            var btnArray = ['取消', '确定'];
+            mui.confirm(`确定删除这条动态吗？`, '', btnArray, function (e) {
+                if (e.index == 1) {
+                    $(".dong-de li").eq(cc).remove()
+                    mui.toast("删除成功")
+                } else {
+                }
+            })
+        });
+        // 点击时间后的三个点后的分享
+        mui("#picture").on('tap', ".article-share", function () {
+            $(".shade")[0].style.display = "block"
+            $(".all")[0].style.display = "block"
+        })
+        // 点击分享界面下面的×
+        mui(".article-item").on("tap", '.hidd', function () {
+            $(".shade")[0].style.display = "none"
+            $(".all")[0].style.display = "none"
+        })
+        // 点击我的文章和我的动态时进行TAB切换
+        mui(".y-attention").on("tap", " div span", function () {
+            $(this).addClass("iconactive").siblings().removeClass("iconactive")
+            $(".bbox>ul>li").eq($(this).index()).show().siblings().hide()
+
+        })
+        var local = localStorage.getItem('key')
+        $('.y-attention div span').addClass("iconactive").siblings().removeClass("iconactive")
+        $(".bbox>ul>li").eq(local).show().siblings().hide()
+        if (local == '0') {
+            $(".mineattention").removeClass("iconactive")
+            $(".minefans").addClass("iconactive")
+            $(".myArticle")[0].style.display = "none"
+            $(".mydynamic")[0].style.display = "block"
+        } else if (local == '1') {
+
+            $(".myArticle")[0].style.display = "block"
+            $(".mydynamic")[0].style.display = "none"
+            $(".mineattention").addClass("iconactive")
+            $(".minefans").removeClass("iconactive")
+        }
+
+
+
+
+
+        mui("#picture").on("tap", ".edit-c", function () {
+            location.href = "contribute.html"
+        })
+        // 我的文章中的标题进行截取
+        function text() {
+            for (let i = 0; i < $(".myArticle-title").length; i++) {
+                $(".myArticle-title")[i].innerHTML = $(".myArticle-title")[i].innerHTML.slice(0, 13) + '···'
+            }
+            for (let i = 0; i < $(".audit-fail").length; i++) {
+                $(".audit-fail")[i].innerHTML = $('.audit-fail')[i].innerHTML.slice(0, 7) + '···'
+            }
+        }
+        text()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/MineTop.css">
+    <title>我的关注和粉丝</title>
+</head>
+<style>
+    .attention-item,
+    .fans-item {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="y-attention">
+        <i class="back1 retreat"></i>
+        <span class="mineattention icon">我的关注</span>
+        <span class="minefans icon">我的粉丝</span>
+    </div>
+    <div class="attbox">
+        <ul>
+            <li class="attention-item">
+                <div>
+                    <div class="allattention">共<span class="allnum">5</span>个关注</div>
+                    <ul>
+                        <li>
+                            <img src="./images/attentionicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/attentionicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/attentionicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/attentionicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="fans-item">
+                <div>
+                    <div class="allattention">共<span class="allnum">5</span>个粉丝</div>
+                    <ul>
+                        <li>
+                            <img src="./images/fansicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/fansicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/fansicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/fansicon.png" alt="">
+                            <div class="title">
+                                <p>环球影视</p>
+                                <p>全球最新影视资讯</p>
+                            </div>
+                            <div class="attentionIcon">
+                                <span class="attention1"><i class="attentionicon"></i><span
+                                        class="attention-txt">关注</span> </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/mui.min.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/MineTop.js"></script>
+    <script>
+        mui(".y-attention").on("tap", " div span", function () {
+            $(this).addClass("iconactive").siblings().removeClass("iconactive")
+            $(".bbox>ul>li").eq($(this).index()).show().siblings().hide()
+        })
+        var local = localStorage.getItem('index')
+        $('.y-attention div span').addClass("iconactive").siblings().removeClass("iconactive")
+        $(".bbox>ul>li").eq(local).show().siblings().hide()
+        if (local == '0') {
+            $(".mineattention").addClass("iconactive")
+            $(".fans-item")[0].style.display = "none"
+            $(".attention-item")[0].style.display = "block"
+            $(".minefans").removeClass("iconactive")
+        } else if (local == '1') {
+            $(".mineattention").removeClass("iconactive")
+            $(".minefans").addClass("iconactive")
+            $(".fans-item")[0].style.display = "block"
+            $(".attention-item")[0].style.display = "none"
+        }
+        // 点击关注时变为已关注
+        mui(".attentionIcon").on('tap', ".attention-txt", function () {
+            if ($(this)[0].innerText.trim() == "关注") {
+                $(this)[0].innerText = "已关注"
+                $(this)[0].parentNode.style.background = "#ccc"
+            } else {
+                $(this)[0].innerText = "关注"
+                $(this)[0].parentNode.style.background = "#3d7eff"
+            }
+        })
+    </script>
+</body>
+
+</html>

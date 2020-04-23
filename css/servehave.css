@@ -1,0 +1,256 @@
+.container-one{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+.input-one{
+    width: 100%;
+    height: 0.32rem;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 0.12rem;
+    color: #333333;
+    display:flex;
+    position: relative;
+}
+.input-one input{
+    font-size: 0.12rem;
+    width: 3.09rem;
+    color: #333333;
+    border-radius: 0.50rem;
+    outline: none;
+    box-shadow: 0 0 5px #f00;
+}
+.cancle{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.serve-one{
+    position: absolute;
+    top: 0.02rem;
+    right: 0.36rem;
+}
+.text p{
+    font-size: 0.14rem;
+    color: #333333;
+    font-weight: 700;
+}
+.middle-one{
+    display: flex;
+    justify-content: space-between;
+    height: 0.3rem;
+    align-items: center;
+}
+.top-right{
+   /* width: 100%; */
+   height: 0.3rem;
+   display: flex;
+   align-items: center;
+}
+.big-one{
+    width: 100%;
+    height: 0.50rem;
+}
+.more{
+    font-size: 0.12rem;
+    color: #999999;
+}
+.test-four{
+    width: 0.66rem;
+    height: 0.25rem;
+    background: #3d7eff;
+    color: #ffffff;
+    font-size: 0.12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    cursor: pointer;
+}
+.test-four span{
+    vertical-align: top;
+}
+.flex-one{
+    display: flex;
+    justify-content: flex-end;
+}
+.ugd{
+    display: flex;
+}
+.comment{
+    width: 100%;
+    /* height: 1.2rem; */
+    overflow: hidden;
+    margin: auto;
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+}
+.left-img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+.left-img img{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+.comment-top{
+    width: 100%;
+    height: 0.16rem;
+    color: #999999;
+    font-size: 0.12rem;
+    display: flex;
+    justify-content: space-between;
+}
+.left-cai{
+    display: flex;
+    width: 100%;
+}
+.comment-text{
+    margin-left: 0.13rem;
+    margin-top: -0.13rem;
+}
+.comment-text p{
+    font-size: 0.12rem;
+    color: #999999;
+    width: 3.0rem;
+    margin-left: 0.30rem;
+    word-break: break-word;
+    margin-top: -0.07rem;
+}
+.comment-bottom{
+    width: 100%;
+    height: 0.3rem;
+    font-size: 12px;
+    color: #999999;
+}
+.left-zan{
+    float: right;
+    margin: 0 0.10rem;
+}
+.num{
+    float: right;
+    margin: 0 10px;
+}
+.cloud{
+    float: right;
+    margin: 0 0.10rem;
+}
+.left-day{
+    margin-left: 0.28rem;
+}
+.null{
+    width: 100%;
+    height: 0.2rem;
+}
+.middle-li{
+    width: 3.02rem;
+    height: 1.03rem;
+    background-color: rgba(242, 242, 242, 1);
+    float: right;
+    margin: 0.15rem 0.12rem 0.1rem 0.1rem;
+}
+.new{
+    margin: 10px -1px 2px -24px;
+}
+.footer{
+    width: 100%;
+    height: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    bottom: -15px;
+    width: 95%;
+    left: 10px;
+    border-top: 1px solid #f2f2f2;
+    background: #ffffff;
+}
+.input {
+    width: 1.24rem;
+    height: 0.30rem;
+    display: flex;
+}
+.input input{
+    width: 1.24rem;
+    height: 0.30rem;
+    background: #f2f2f2;
+    border-radius: 0.50rem;
+    border: none;
+}
+.num-one span{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.collect span{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.comment-two span{
+    font-size: 0.12rem;
+    color: #333333;
+}
+.num-one{
+    display: flex;
+    width: 0.25rem;
+    flex-direction: column;
+}
+.collect img{
+    width: 0.16rem;
+    height: 0.16rem;
+}
+.collect span{
+    color: #333333;
+    font-size:0.12rem;
+}
+.collect{
+    display: flex;
+    width: 0.25rem;
+    flex-direction: column;
+}
+.email img{
+    width: 0.16rem;
+    height: 0.16rem;
+}
+.email span{
+    color: #333333;
+    font-size:0.12rem;
+}
+.email{
+    display: flex;
+    width: 0.25rem;
+    flex-direction: column;
+}
+/* 文章 */
+.essay span{
+    font-size: 14px;
+    color: #333333;
+}
+.line-one{
+    width: 100%;
+    height: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+.eng{
+    color:#3d7eff!important;
+    font-size: 0.14rem !important;
+}
+.ocean{
+    width:1.60rem ;
+    height: 0.32rem;
+    display: flex;
+    flex-wrap:wrap;
+}
+.essay{
+    border-bottom: 1px solid #f2f2f2;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
